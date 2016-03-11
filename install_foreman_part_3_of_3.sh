@@ -12,6 +12,6 @@ yum -y install postgresql-server postgresql-contrib
 
 service postgresql initdb
 
-service posotgresql start
+service postgresql start
 
 foreman-installer
