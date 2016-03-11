@@ -6,7 +6,7 @@ foreman-installer --enable-foreman-plugin-salt --enable-foreman-proxy-plugin-sal
 echo -e "Cmnd_Alias SALT = /usr/bin/salt, /usr/bin/salt-key\nforeman-proxy ALL = NOPASSWD: SALT\nsaltuser ALL = NOPASSWD: ALL\nDefaults:foreman-proxy !r
 equiretty\n" >> /etc/sudoers
 
-insert into /etc/salt/master
+#insert into /etc/salt/master
 
 
 echo -e "master_tops:" >> /etc/salt/master
