@@ -3,8 +3,10 @@
 yum -y install salt-api
 
 foreman-installer --enable-foreman-plugin-salt --enable-foreman-proxy-plugin-salt
-echo -e "Cmnd_Alias SALT = /usr/bin/salt, /usr/bin/salt-key\nforeman-proxy ALL = NOPASSWD: SALT\nsaltuser ALL = NOPASSWD: ALL\nDefaults:foreman-proxy !r
-equiretty\n" >> /etc/sudoers
+echo -e "Cmnd_Alias SALT = /usr/bin/salt, /usr/bin/salt-key" >> /etc/sudoers
+echo -e "foreman-proxy ALL = NOPASSWD: SALT" >> /etc/sudoers
+echo -e "saltuser ALL = NOPASSWD: ALL" >> /etc/sudoers
+echo -e "Defaults:foreman-proxy !requiretty" >> /etc/sudoers
 
 #insert into /etc/salt/master
 
