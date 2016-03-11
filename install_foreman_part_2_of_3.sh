@@ -1,4 +1,5 @@
-
+#!/bin/bash
+yum -y update
 # 1. Install the Software Collections tools:
 yum -y install scl-utils
 # 2. Download a package with repository for your system.
