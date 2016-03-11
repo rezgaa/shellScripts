@@ -2,7 +2,9 @@
 yum -y update
 yum -y install salt-api
 
+
 foreman-installer --enable-foreman-plugin-salt --enable-foreman-proxy-plugin-salt
+
 echo -e "Cmnd_Alias SALT = /usr/bin/salt, /usr/bin/salt-key" >> /etc/sudoers
 echo -e "foreman-proxy ALL = NOPASSWD: SALT" >> /etc/sudoers
 echo -e "saltuser ALL = NOPASSWD: ALL" >> /etc/sudoers
@@ -49,5 +51,12 @@ echo -e ":api_auth: pam" >> /etc/foreman-proxy/settings.d/salt.yml
 echo -e ":api_url: https://salt.localdomain:9191" >> /etc/foreman-proxy/settings.d/salt.yml
 echo -e ":api_username: saltuser" >> /etc/foreman-proxy/settings.d/salt.yml
 echo -e ":api_password: saltpassword" >> /etc/foreman-proxy/settings.d/salt.yml
+
+
+service foreman restart && service foreman-proxy restart && service salt-master restart && service salt-api restart && service foreman-tasks restart
+
+foreman-installer --enable-foreman-plugin-salt --enable-foreman-proxy-plugin-salt
+
+
 
 service foreman restart && service foreman-proxy restart && service salt-master restart && service salt-api restart && service foreman-tasks restart
