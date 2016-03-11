@@ -1,11 +1,11 @@
 
 # 1. Install the Software Collections tools:
-yum install scl-utils
+yum -y install scl-utils
 # 2. Download a package with repository for your system.
 #  (See the Yum Repositories section below. You can use `wget URL`.)
-yum install https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-6-x86_64/download/rhscl-ruby193-epel-6-x86_64.noarch.rpm
+yum -y install https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-6-x86_64/download/rhscl-ruby193-epel-6-x86_64.noarch.rpm
 # 3. Install the repo package:
-yum install rhscl-ruby193-*.noarch.rpm
+yum -y install rhscl-ruby193-*.noarch.rpm
 # 4. Install the collection:
 yum -y install ruby193
 yum -y install ruby193-ruby-devel.x86_64 
