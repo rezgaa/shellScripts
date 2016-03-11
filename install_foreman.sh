@@ -1,3 +1,5 @@
+
+
 wget http://public-yum.oracle.com/public-yum-ol6.repo -P /etc/yum.repos.d/
 
 ## RHEL/CentOS 6 64-Bit ##
